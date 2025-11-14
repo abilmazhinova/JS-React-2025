@@ -1,0 +1,140 @@
+.something-list {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.something-list h1 {
+  font-size: 2.2rem;
+  color: #111827;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Поисковик */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.search-input {
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid #b0dfe5;
+  width: 260px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+  font-family: 'Helvetica', sans-serif;
+  background: white;
+}
+
+.search-input:focus {
+  border-color: #5F9EA0;
+  box-shadow: 0 0 10px rgba(95, 158, 160, 0.4);
+}
+
+.search-btn,
+.clear-btn {
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 3px 8px rgba(95, 158, 160, 0.25);
+  font-family: 'Helvetica', sans-serif;
+  white-space: nowrap;
+}
+
+.search-btn {
+  background-color: #7FBFBF;
+}
+
+.clear-btn {
+  background-color: #416d6e;
+}
+
+.search-btn:hover,
+.clear-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(95, 158, 160, 0.4);
+}
+
+/* Сетка карточек */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Сообщения */
+.search-info {
+  text-align: center;
+  color: #5F9EA0;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.no-results {
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  margin: 3rem 0;
+  font-size: 1.1rem;
+  padding: 2rem;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Адаптивность */
+@media (max-width: 1400px) {
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1200px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .search-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .something-list {
+    padding: 1rem;
+  }
+}
